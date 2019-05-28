@@ -24,6 +24,6 @@ app.get('/', (req, res) => {const randomRecipe = postgres.select('*').from('reci
 
 })})
 
-app.listen(3000, ()=> {
+app.listen(process.env.PORT || 3000, ()=> {
     console.log("Up and at em'")
 })
