@@ -9,10 +9,8 @@ const app = express();
 const postgres = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-reticulated-24844',
-      user : 'postgres',
-      password : 'test',
-      database : 'Whats-for-dinner'
+      host : process.env.DATABASE_URL,
+      ssl: true,
     }
   });
   
